@@ -9,3 +9,23 @@
 </div>
 
 <script type="text/coffeescript" src="src/HTMLRenderer.coffee"></script>
+<script type="text/coffeescript">
+  eraseBubble = (row, column)->
+    $("#b-#{row}-#{column}").css
+      background: "radial-gradient(circle 20px, rgb(180, 180, 180) 0%, rgb(180, 180, 180) 90%, rgba(180, 180, 180, 0) 100%)"
+
+  displayBubble = (row, column)->
+    $("#b-#{row}-#{column}").css
+      background: "radial-gradient(circle 20px, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%)"
+
+
+  displayBubble 18, 4
+  setTimeout ->
+    eraseBubble 18, 4
+    displayBubble 17, 3
+    setTimeout ->
+      eraseBubble 17, 3
+      displayBubble 16, 2
+    , 200
+  , 200
+</script>
