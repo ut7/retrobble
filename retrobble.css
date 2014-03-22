@@ -1,5 +1,19 @@
 .playfield {
-  width: 400px;
+  width: 90px;
   height: 600px;
   background-color: grey;
+}
+
+.bubble {
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle 15px, black 0%, black 90%, rgba(0, 0, 0, 0) 100%);
+  float: left;
+  position: relative;
+}
+
+.row {
+  clear: both;
+  height: 30px;
+  background-color: red;
 }
